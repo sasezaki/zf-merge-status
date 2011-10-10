@@ -1,38 +1,54 @@
 <?php
 setUp();
+
 if (!isset($argv[1])) {
     echo 'choose component as arg';
     echo json_encode(ZFMerge_Svn::getComponents());
     echo PHP_EOL;
     die();
 }
+$onlynotice = isset($argv[2]) ? true :false;
 
-$frontendOptions = array('lifetime' => 86400, 'automatic_serialization' => true);
-$backendOptions = array('cache_dir' => __DIR__.'/zfmerge');
-$cache = Zend_Cache::factory('Core', 'File', $frontendOptions, $backendOptions);
-//$svn = new ZFMerge_Svn($arg_component, $_SERVER['HOME'].'/svn/zf1');
-//$git = new ZFMerge_Git($arg_component, $_SERVER['HOME'].'/git/zf2');
-
-$differ = new ZFMerge_Differ($argv[1], $cache, 
-                             $_SERVER['HOME']. '/dev/svn/zf1-standard-trunk', 
-                             $_SERVER['HOME'].'/dev/zendframework_zf2');
-$checks = $differ->check();
-
-foreach ($checks as $rev => $status) {
-    echo '*revision|'. $rev .' ....... ' ;
-    echo $status->status, PHP_EOL;
-    echo ' - ' . $status->message, PHP_EOL;
-    if ($status->status == ZFMerge_Status::STATUS_MERGED) {
-        echo ' - ' . $status->commit->id, PHP_EOL;
+if ($argv[1] == 'ALL') {
+    foreach (ZFMerge_Svn::getComponents() as $c) {
+        if (in_array($c, ZFMerge_Differ::getIgnoreComponents())) continue;
+        echo '//////////', $c, '////////////////////////////', PHP_EOL;
+        check($c, $onlynotice);
     }
-    if ($status->status == ZFMerge_Status::STATUS_NONE) {
-        echo '[NOTICE] This commit seems to be not reflected to ZF2 yet.', PHP_EOL;
-        echo 'http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev='. $rev, PHP_EOL;
-    }
-
-    echo PHP_EOL;
+} else {
+    check($argv[1], $onlynotice);
 }
 
+function check($component, $onlynotice){
+    $frontendOptions = array('lifetime' => 86400, 'automatic_serialization' => true);
+    $backendOptions = array('cache_dir' => __DIR__.'/zfmerge');
+    $cache = Zend_Cache::factory('Core', 'File', $frontendOptions, $backendOptions);
+    //$svn = new ZFMerge_Svn($arg_component, $_SERVER['HOME'].'/svn/zf1');
+    //$git = new ZFMerge_Git($arg_component, $_SERVER['HOME'].'/git/zf2');
+
+    $differ = new ZFMerge_Differ($component, $cache, 
+                             $_SERVER['HOME']. '/dev/svn/zf1-standard-trunk', 
+                             $_SERVER['HOME'].'/dev/zendframework_zf2');
+    $checks = $differ->check();
+
+    foreach ($checks as $rev => $status) {
+        if ($onlynotice && $status->status !== ZFMerge_Status::STATUS_NONE) continue;
+
+        echo '*revision|'. $rev .' ....... ' ;
+        echo $status->status, PHP_EOL;
+        echo ' - ' . $status->message, PHP_EOL;
+
+        if ($status->status == ZFMerge_Status::STATUS_NONE) {
+            echo '[NOTICE] This commit seems to be not reflected to ZF2 yet.', PHP_EOL;
+            echo 'http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev='. $rev, PHP_EOL;
+        }
+        if ($status->status == ZFMerge_Status::STATUS_MERGED) {
+            echo ' - ' . $status->commit->id, PHP_EOL;
+        }
+    
+        echo PHP_EOL;
+    }
+}
 
 
 /**************************************************************/
@@ -56,33 +72,18 @@ class ZFMerge_Svn
     public $component;
     protected $svn;
 
-    public $global_ignore_revisions = array(
-        23483, // ZF-10669 Replace CRLF with LF, trim trailing whitespace
-        23485, // ZF-10798 replacing tabs with spaces"
-        23772, // ZF-11122 Updated the copyright in various docblocks to 2011
-        23650, // [ZF-10805]: method docblocks contain invalid @param syntax
-        22662, //ZF-5413: no double parentheses | NULL -> null (using "$var === null" instaed of "is_null($var)")
-        22661, // ZF-5413: fixed my last commit is_null -> === null
-        22660, // ZF-5413: use "$var === null" instaed of "is_null($var)"
-    );
-
     public static $components = array('Acl', 'Amf', 'Application', 'Auth', 'Barcode', 'Cache', 'Captcha', 'Cloud', 'CodeGenerator', 'Config', 'Console', 'Controller', 'Crypt', 'Currency', 'Date', 'Db', 'Dojo', 'Dom', 'Feed', 'File', 'Filter', 'Form', 'Gdata', 'Http', 'InfoCard', 'Json', 'Layout', 'Ldap', 'Loader', 'Locale', 'Log', 'Mail', 'Markup', 'Measure', 'Memory', 'Mime', 'Navigation', 'Oauth', 'OpenId', 'Paginator', 'Pdf', 'ProgressBar', 'Queue', 'Reflection', 'Rest', 'Search', 'Serializer', 'Server', 'Service', 'Session', 'Soap', 'Tag', 'Test', 'Text', 'TimeSync', 'Tool', 'Translate', 'Uri', 'Validate', 'View', 'Wildfire', 'XmlRpc');
 
     public static function checkComponent($component)
     {
         //ignore components - which will be update completly (ZF1 component name)
-        $ignore_components = array(
-            'Cache', 'Loader', 'Db'
-        );
-
-        if (in_array(ucfirst($component), $ignore_components)) {
-            throw new Exception("$component is under updateing");
-        }
-
-        //$components = array(
-        //    'Auth' => 'Authentication',
-        //    'Barcode' => 'Barcode', 
+        //$ignore_components = array(
+        //    'Cache', 'Loader', 'Db'
         //);
+
+        //if (in_array(ucfirst($component), $ignore_components)) {
+        //    throw new Exception("$component is under updateing");
+        //}
 
         if(!in_array($component, static::$components)) {
             throw new Exception("$component is not valid component");
@@ -101,19 +102,12 @@ class ZFMerge_Svn
 
     public function getSvnPaths()
     {
-        //$file_or_dirs = static::$component_files[$this->component];
         $file_or_dirs = $this->getComponentFiles();
 
         $paths = array();
         foreach ($file_or_dirs as $file_or_dir) {
             $paths[] = array($file_or_dir);
         }
-
-        /**
-        $paths = array(
-            array($this->svn_local_path .'/library/Zend/' . $this->component),
-            array($this->svn_local_path .'/library/Zend/' . $this->component . '.php')
-        );*/
 
         return $paths;
     }
@@ -142,16 +136,8 @@ class ZFMerge_Svn
                 throw new Exception("logs is not array. args".print_r($args, true). " switches " . print_r($switches, true));
             }
 
-            //$ignores = $this->global_ignore_revisions;
-            //$logs = array_filter($logs, function ($log) use ($ignores){
-            //    return !in_array($log['REVISION'], $ignores);
-            //});
-
             $logsz = array_merge($logsz, $logs);
         }
-
-        // todo should be sort
-        //var_export($logsz);
     
         return $logsz;
     }
@@ -186,7 +172,6 @@ class ZFMerge_Svn
 
         return $this->getSvnDiff()->diff->run($paths, $switches);
     }
-
 
     public function extractRevSet()
     {
@@ -241,6 +226,9 @@ class ZFMerge_Git
         return $git;
     }
 
+    /**
+     * @todo Zend_Reflection => Zend\Code\Reflection && Zend\Code\Reflection\
+     */
     public function getLogs()
     {
         $fetch = $this->getGit()->getRevListFetcher()
@@ -270,17 +258,6 @@ class ZFMerge_Git
         }
 
         return $issues;
-
-        /**
-        $issues = array();
-        foreach ($logs as $commit) {
-            // @see zf-status/application/modules/zfstatus/services/Zf.php 
-            $pattern = '/(?P<issue>ZF2?-?\d+)/';
-            $issues[$commit->id] = (preg_match($pattern, $commit->getMessage(), $match)) ? $match['issue'] : false;
-        }
-
-        return $issues;
-        */
     }
 }
 
@@ -302,6 +279,11 @@ class ZFMerge_Differ
     protected $git;
     protected $component; // <- should be ZF1's !!
 
+    public static $ignore_components = array(
+        'Cache', 'Db', 'Loader', 'Reflection',
+        'Session' // ??? (<- Already Updated for ZF2. but, I can't judge)
+    );
+
     public $global_ignore_revisions = array(
         23483 => 'ZF-10669 Replace CRLF with LF, trim trailing whitespace',
         23485 => 'ZF-10798 replacing tabs with spaces',
@@ -316,8 +298,6 @@ class ZFMerge_Differ
     {
         $this->component = $component;
         $this->cache = $cache;
-        //$this->svn = $svn;
-        //$this->git = $git;
         $this->svn = new ZFMerge_Svn($this->getComponentName(), $svn_path);
         $this->git = new ZFMerge_Git($this->getComponentName(true), $git_path);
     }
@@ -328,10 +308,18 @@ class ZFMerge_Differ
             switch($this->component) {
                 case 'Auth' :
                     return 'Authentication';
+                case 'Gdata' :
+                    return 'GData';
                 case 'Oauth' :
                     return 'OAuth';
                 case 'LDAP' :
                     return 'Ldap';
+                case 'Translate' :
+                    return 'Translator' ;
+                case 'Validate' :
+                    return 'Validator';
+                //case 'Reflection' :
+                //    return 'Code\\Reflection';
                 default :
                     return $this->component;
 
@@ -432,6 +420,11 @@ class ZFMerge_Differ
     public function getIgnores()
     {
         return $this->global_ignore_revisions;
+    }
+
+    public static function getIgnoreComponents()
+    {
+        return static::$ignore_components;
     }
 }
 

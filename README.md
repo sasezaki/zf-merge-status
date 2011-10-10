@@ -5,13 +5,16 @@ by sasezaki
 ## What is this ?
 
 This is a Check tool for 
+
     Zend Framework 1 's issue fix 
      IS MERGED TO
     Zend Framework 2.
 
 ## Why ?
 ZF2 started developing since July 05 2010. (then ZF2 is branched from ZF1)
+
 But sadly, all ZF1's issue fix is not merged ZF2 completely, now.
+
 This tool aimed to support merging ZF1's commits.
 
 ## How to use ?
@@ -19,7 +22,7 @@ please set your environment in zf-merge-status.php
 - ZF1's svn local checkout.
 - ZF2's git local clone.
 
-
+sample usage:
 <code>
 $php zf-merge-status.php Auth
 </code>
@@ -59,3 +62,9 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24184
 </pre>
 
+## Info
+http://framework.zend.com/zf2
+http://framework.zend.com/wiki/display/ZFDEV2/Components+Under+Refactoring
+
+Some component is under re-implementing, so all issue not need to merge.
+You should need to know ZF2's developing status.
