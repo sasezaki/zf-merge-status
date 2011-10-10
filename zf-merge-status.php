@@ -281,6 +281,7 @@ class ZFMerge_Differ
 
     public static $ignore_components = array(
         'Cache', 'Db', 'Loader', 'Reflection',
+        'Controller',
         'Session' // ??? (<- Already Updated for ZF2. but, I can't judge)
     );
 
