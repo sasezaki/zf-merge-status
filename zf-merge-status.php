@@ -365,7 +365,7 @@ class ZFMerge_Differ
             //$key = $ret->key;
             $commit = $revset->current();
             $issue = $revset->getInfo();
-            if (false !== $r = array_keys($svn_revs, $issue)) {
+            if ($issue !== false && false !== $r = array_keys($svn_revs, $issue)) {
                 foreach ($r as $rv) {
                     $status = new ZFMerge_Status;
                     $status->status = ZFMerge_Status::STATUS_MERGED;
