@@ -295,6 +295,10 @@ class ZFMerge_Differ
         22660 => 'ZF-5413: use "$var === null" instaed of "is_null($var)"',
     );
 
+    public $ignore_revisions = array(
+        'Barcode' => array(22999 => '[GENERIC] Barcode: remove extra spaces'),
+    );
+
     public function __construct($component, $cache, $svn_path, $git_path)
     {
         $this->component = $component;
@@ -420,7 +424,11 @@ class ZFMerge_Differ
 
     public function getIgnores()
     {
-        return $this->global_ignore_revisions;
+        if (isset($this->ignore_revisions[$this->component])) {
+            return $this->global_ignore_revisions + $this->ignore_revisions[$this->component];
+        } else {
+            return $this->global_ignore_revisions;
+        }
     }
 
     public static function getIgnoreComponents()
