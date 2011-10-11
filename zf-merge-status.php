@@ -297,6 +297,7 @@ class ZFMerge_Differ
 
     public $ignore_revisions = array(
         'Barcode' => array(22999 => '[GENERIC] Barcode: remove extra spaces'),
+        'Text' => array(23856 => '[ZF-11234] Zend_Text - Missing require_once.'),
     );
 
     public function __construct($component, $cache, $svn_path, $git_path)
