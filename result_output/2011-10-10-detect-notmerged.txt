@@ -1,4 +1,9 @@
 //////////Acl////////////////////////////
+*revision|23480 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23480
+
 //////////Amf////////////////////////////
 *revision|23255 ....... none
  - 
@@ -25,6 +30,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24137
 
+*revision|24202 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24202
+
 *revision|24203 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -35,16 +45,31 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24205
 
+*revision|24475 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24475
+
 *revision|24481 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24481
 
 //////////Application////////////////////////////
+*revision|22882 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22882
+
 *revision|22965 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22965
+
+*revision|23058 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23058
 
 *revision|23277 ....... none
  - 
@@ -112,6 +137,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24393
 
 //////////Auth////////////////////////////
+*revision|23088 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23088
+
 *revision|23693 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -123,6 +153,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24184
 
 //////////Barcode////////////////////////////
+*revision|22999 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22999
+
 //////////Captcha////////////////////////////
 *revision|24145 ....... none
  - 
@@ -145,6 +180,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24243
 
 //////////Cloud////////////////////////////
+*revision|23004 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23004
+
 *revision|23221 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -154,6 +194,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23746
+
+*revision|24492 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24492
 
 //////////CodeGenerator////////////////////////////
 *revision|23559 ....... none
@@ -176,12 +221,22 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24098
 
+*revision|24389 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24389
+
 *revision|24456 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24456
 
 //////////Config////////////////////////////
+*revision|23103 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23103
+
 *revision|23120 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -191,6 +246,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23293
+
+*revision|23295 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23295
 
 *revision|23882 ....... none
  - 
@@ -209,9 +269,24 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 
 //////////Console////////////////////////////
 //////////Crypt////////////////////////////
+*revision|23438 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23438
+
 //////////Currency////////////////////////////
 //////////Date////////////////////////////
+*revision|22712 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22712
+
 //////////Dojo////////////////////////////
+*revision|23060 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23060
+
 *revision|23932 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -234,10 +309,25 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23069
 
+*revision|23071 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23071
+
+*revision|23075 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23075
+
 *revision|23077 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23077
+
+*revision|23090 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23090
 
 *revision|23902 ....... none
  - 
@@ -404,10 +494,30 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22810
 
+*revision|23058 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23058
+
 *revision|23073 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23073
+
+*revision|23122 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23122
+
+*revision|23130 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23130
+
+*revision|23156 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23156
 
 *revision|23172 ....... none
  - 
@@ -418,6 +528,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23173
+
+*revision|23214 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23214
 
 *revision|23230 ....... none
  - 
@@ -550,6 +665,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24387
 
 //////////InfoCard////////////////////////////
+*revision|23088 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23088
+
 *revision|23279 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -584,6 +704,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24353
 
 //////////Locale////////////////////////////
+*revision|22712 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22712
+
 *revision|22807 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -610,7 +735,27 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22977
 
+*revision|23575 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23575
+
+*revision|23596 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23596
+
+*revision|23600 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23600
+
 //////////Mail////////////////////////////
+*revision|23128 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23128
+
 *revision|23423 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -625,6 +770,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24162
+
+*revision|24326 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24326
 
 //////////Markup////////////////////////////
 *revision|24265 ....... none
@@ -646,6 +796,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23944
 
 //////////Navigation////////////////////////////
+*revision|22882 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22882
+
 *revision|24118 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -661,16 +816,36 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24451
 
+*revision|24454 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24454
+
 *revision|24458 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24458
 
+*revision|24476 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24476
+
 //////////Oauth////////////////////////////
+*revision|23072 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23072
+
 *revision|23074 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23074
+
+*revision|23076 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23076
 
 *revision|23078 ....... none
  - 
@@ -687,12 +862,22 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23946
 
+*revision|24363 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24363
+
 *revision|24414 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24414
 
 //////////OpenId////////////////////////////
+*revision|23088 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23088
+
 *revision|23160 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -740,6 +925,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22839
 
+*revision|22844 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22844
+
 *revision|22908 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -755,6 +945,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22910
 
+*revision|23194 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23194
+
 *revision|23394 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -768,6 +963,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23296
 
 //////////Rest////////////////////////////
+*revision|23216 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23216
+
 *revision|23420 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -834,6 +1034,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24166
 
+*revision|24169 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24169
+
 //////////Serializer////////////////////////////
 //////////Server////////////////////////////
 *revision|23182 ....... none
@@ -851,16 +1056,76 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23317
 
+*revision|23319 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23319
+
 //////////Service////////////////////////////
+*revision|22628 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22628
+
 *revision|22773 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22773
 
+*revision|22946 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22946
+
+*revision|22980 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22980
+
+*revision|22981 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22981
+
+*revision|22982 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22982
+
+*revision|22984 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22984
+
+*revision|23004 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23004
+
+*revision|23022 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23022
+
 *revision|23105 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23105
+
+*revision|23110 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23110
+
+*revision|23112 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23112
+
+*revision|23157 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23157
 
 *revision|23164 ....... none
  - 
@@ -876,6 +1141,26 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23261
+
+*revision|23267 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23267
+
+*revision|23269 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23269
+
+*revision|23271 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23271
+
+*revision|23273 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23273
 
 *revision|23311 ....... none
  - 
@@ -952,7 +1237,27 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24469
 
+*revision|24491 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24491
+
+*revision|24492 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24492
+
+*revision|24495 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24495
+
 //////////Soap////////////////////////////
+*revision|22560 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22560
+
 *revision|22860 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -1021,6 +1326,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24497
 
+*revision|24499 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24499
+
 //////////TimeSync////////////////////////////
 //////////Tool////////////////////////////
 *revision|22875 ....... none
@@ -1042,6 +1352,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23207
+
+*revision|23335 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23335
 
 *revision|23416 ....... none
  - 
@@ -1226,6 +1541,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22668
 
+*revision|22691 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22691
+
 *revision|22830 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -1257,6 +1577,16 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22879
 
+*revision|23058 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23058
+
+*revision|23080 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23080
+
 *revision|23242 ....... none
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
@@ -1271,6 +1601,11 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23386
+
+*revision|23387 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23387
 
 *revision|23390 ....... none
  - 
@@ -1388,4 +1723,9 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
  - 
 [NOTICE] This commit seems to be not reflected to ZF2 yet.
 http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24402
+
+*revision|24480 ....... none
+ - 
+[NOTICE] This commit seems to be not reflected to ZF2 yet.
+http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24480
 
