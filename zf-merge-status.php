@@ -1,5 +1,6 @@
 <?php
-setUp();
+$config = parse_ini_file(getcwd().'/zfmerge.ini');
+$differ = setUp($config);
 
 if (!isset($argv[1])) {
     echo 'choose component as arg';
@@ -10,25 +11,23 @@ if (!isset($argv[1])) {
 $onlynotice = isset($argv[2]) ? true :false;
 
 if ($argv[1] == 'ALL') {
-    foreach (ZFMerge_Svn::getComponents() as $c) {
-        if (in_array($c, ZFMerge_Differ::getIgnoreComponents())) continue;
-        echo '//////////', $c, '////////////////////////////', PHP_EOL;
-        check($c, $onlynotice);
+    foreach (ZFMerge_Svn::getComponents() as $component) {
+        if (in_array($component, ZFMerge_Differ::getIgnoreComponents())) continue;
+        echo '+++', $component, '+++', PHP_EOL;
+        check($differ($component), $onlynotice);
+    }
+} else if ($argv[1] === 'pickup') {
+    foreach (ZFMerge_Svn::getComponents() as $component) {
+        if (in_array($component, array('Application', 'View', 'CodeGenerator', 'Tool', 'Controller', 'Service'))) continue;
+        if (in_array($component, ZFMerge_Differ::getIgnoreComponents())) continue;
+        echo '+++', $component, '+++', PHP_EOL;
+        check($differ($component), $onlynotice);
     }
 } else {
-    check($argv[1], $onlynotice);
+    check($differ($argv[1]), $onlynotice);
 }
 
-function check($component, $onlynotice){
-    $frontendOptions = array('lifetime' => 86400, 'automatic_serialization' => true);
-    $backendOptions = array('cache_dir' => __DIR__.'/zfmerge');
-    $cache = Zend_Cache::factory('Core', 'File', $frontendOptions, $backendOptions);
-    //$svn = new ZFMerge_Svn($arg_component, $_SERVER['HOME'].'/svn/zf1');
-    //$git = new ZFMerge_Git($arg_component, $_SERVER['HOME'].'/git/zf2');
-
-    $differ = new ZFMerge_Differ($component, $cache, 
-                             $_SERVER['HOME']. '/dev/svn/zf1-standard-trunk', 
-                             $_SERVER['HOME'].'/dev/zendframework_zf2');
+function check($differ, $onlynotice){
     $checks = $differ->check();
 
     foreach ($checks as $rev => $status) {
@@ -53,15 +52,29 @@ function check($component, $onlynotice){
 
 /**************************************************************/
 
-function setUp() {
+function setUp($config) {
+
+    // ensure zf1
+    set_include_path($config['zf1'].PATH_SEPARATOR.get_include_path());
     require_once 'VersionControl/SVN.php';
     require_once 'VersionControl/Git.php';
 
-    // ensure zf1
-    set_include_path($_SERVER['HOME'].'/tmp/ZF-1.11.5/'.PATH_SEPARATOR.get_include_path());
-
     require_once 'Zend/Loader/Autoloader.php';
     $loader = Zend_Loader_Autoloader::getInstance();
+
+    $frontendOptions = array('lifetime' => 86400 * 5, 'automatic_serialization' => true);
+    $backendOptions = array('cache_dir' => $config['cache_dir']);
+    $cache = Zend_Cache::factory('Core', 'File', $frontendOptions, $backendOptions);
+
+    $zf1_path = $config['zf1_svn_path'];
+    $zf2_path = $config['zf2_git_path'];
+    $ignores = $config['ignores'];
+
+    return function ($component) use ($cache, $zf1_path, $zf2_path, $ignores) {
+        $differ = new ZFMerge_Differ($component, $cache, $zf1_path, $zf2_path);
+        $differ->setIgnoreRevisionSet($ignores);
+        return $differ;
+    };
 }
 
 class ZFMerge_Svn
@@ -167,6 +180,7 @@ class ZFMerge_Svn
         $switches = array('r' => ''. $rev + $prev. ':'. $rev);
 
         foreach ($paths as $k => $path) {
+            $path = str_replace('/standard/trunk', '', $path);
             $paths[$k] = $this->svn_local_path .$path;
         }
 
@@ -226,17 +240,22 @@ class ZFMerge_Git
         return $git;
     }
 
-    /**
-     * @todo Zend_Reflection => Zend\Code\Reflection && Zend\Code\Reflection\
-     */
     public function getLogs()
     {
-        $fetch = $this->getGit()->getRevListFetcher()
-            ->target('library/Zend/'.$this->component)
-            ->setOption('all')
-            ->setOption('since', '2010-07-05')
-            ->fetch();
-        return $fetch;
+        $logs = array();
+        $targets = (stripos($this->component, "\\") === false) 
+            ? array($this->component) 
+            : array(str_replace("\\", '/', $this->component).'.php',
+                    str_replace("\\", '/', $this->component));
+        foreach ($targets as $target) {
+            $logs += $this->getGit()->getRevListFetcher()
+                    ->target('library/Zend/'.$target)
+                    ->setOption('all')
+                    ->setOption('since', '2010-07-05')
+                ->fetch();
+        }
+
+        return $logs;
     }
 
     public function extractRevSet()
@@ -285,6 +304,8 @@ class ZFMerge_Differ
         'Session' // ??? (<- Already Updated for ZF2. but, I can't judge)
     );
 
+    public $ignore_revisions_set = false;
+
     public $global_ignore_revisions = array(
         23483 => 'ZF-10669 Replace CRLF with LF, trim trailing whitespace',
         23485 => 'ZF-10798 replacing tabs with spaces',
@@ -293,12 +314,17 @@ class ZFMerge_Differ
         22662 => 'ZF-5413: no double parentheses | NULL -> null (using "$var === null" instaed of "is_null($var)")',
         22661 => 'ZF-5413: fixed my last commit is_null -> === null',
         22660 => 'ZF-5413: use "$var === null" instaed of "is_null($var)"',
+        23088 => 'merged https://github.com/zendframework/zf2/pull/494',
     );
 
+    /**
     public $ignore_revisions = array(
+        'Acl' => array(23480 => '****already merged***'), // <- not has issue no (@todo handle automatic these)
         'Barcode' => array(22999 => '[GENERIC] Barcode: remove extra spaces'),
+        'InfoCard' => array(23279 => 'merged https://github.com/zendframework/zf2/pull/494'), 
+        'Service' => array(22628 => '***merged**'), // Twitter
         'Text' => array(23856 => '[ZF-11234] Zend_Text - Missing require_once.'),
-    );
+    );*/
 
     public function __construct($component, $cache, $svn_path, $git_path)
     {
@@ -324,8 +350,10 @@ class ZFMerge_Differ
                     return 'Translator' ;
                 case 'Validate' :
                     return 'Validator';
-                //case 'Reflection' :
-                //    return 'Code\\Reflection';
+                case 'Reflection' :
+                    return 'Code\\Reflection';
+                case 'CodeGenerator' :
+                        return 'Code\\Generator';
                 default :
                     return $this->component;
 
@@ -412,8 +440,9 @@ class ZFMerge_Differ
                     }
 
                     // add diff
-                    $svndiff = $this->svn->diff($current_paths, $rev);
-                    $status->message = $svndiff;
+                    // very heavy
+                    //$svndiff = $this->svn->diff($current_paths, $rev);
+                    //$status->message = $svndiff;
 
                     $diff[$rev] = $status;
                 }
@@ -423,10 +452,17 @@ class ZFMerge_Differ
         return $diff;
     }
 
+    public function setIgnoreRevisionSet($path)
+    {
+        $this->ignore_revisions_set = $path;
+    }
+
     public function getIgnores()
     {
-        if (isset($this->ignore_revisions[$this->component])) {
-            return $this->global_ignore_revisions + $this->ignore_revisions[$this->component];
+        $ignores = include $this->ignore_revisions_set;
+
+        if (isset($ignores[$this->component])) {
+            return $this->global_ignore_revisions + $ignores[$this->component];
         } else {
             return $this->global_ignore_revisions;
         }

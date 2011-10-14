@@ -18,7 +18,7 @@ But sadly, all ZF1's issue fix is not merged ZF2 completely, now.
 This tool aimed to support merging ZF1's commits.
 
 ## How to use ?
-please set your environment in zf-merge-status.php
+please set your environment in zfmerge.ini
 - ZF1's svn local checkout.
 - ZF2's git local clone.
 

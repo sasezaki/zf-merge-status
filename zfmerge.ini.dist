@@ -1,0 +1,16 @@
+
+;require only "library" directory.
+;svn checkout http://framework.zend.com/svn/framework/standard/trunk/library library
+zf1_svn_path = /path/to/svn/zf1-standard-trunk
+
+;git cloned path
+zf2_git_path = /path/to/zf2
+
+; 
+zf1 = /path/to/zf/library
+
+; 
+ignores = 'ignores.php';
+
+; require for svn log caching
+cache_dir = 'zfmerge'
