@@ -63,8 +63,18 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 </pre>
 
 ## Info
-http://framework.zend.com/zf2
-http://framework.zend.com/wiki/display/ZFDEV2/Components+Under+Refactoring
+ - http://framework.zend.com/zf2
+ - http://framework.zend.com/wiki/display/ZFDEV2/Components+Under+Refactoring
 
 Some component is under re-implementing, so all issue not need to merge.
 You should need to know ZF2's developing status.
+
+## Setup with pryus
+<code>
+$php pyrus.phar ./vendor set bin_dir ./vendor/bin
+$php pyrus.phar ./vendor install pear/VersionControl_SVN-alpha
+$php pyrus.phar ./vendor install pear/VersionControl_Git-alpha
+$php pyrus.phar ./vendor channel-discover pear.zfcampus.org
+$php pyrus.phar ./vendor install http://pear.zfcampus.org/get/ZF-1.11.10.tgz
+</code>
+

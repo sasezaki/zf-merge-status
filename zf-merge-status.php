@@ -54,11 +54,15 @@ function check($differ, $onlynotice){
 
 function setUp($config) {
 
-    // ensure zf1
-    set_include_path($config['zf1'].PATH_SEPARATOR.get_include_path());
+    // check all requirements installed via pyrus?
+    if (file_exists(__DIR__.'/vendor/php/Zend/Version.php') &&
+        file_exists(__DIR__.'/vendor/php/VersionControl/SVN.php') &&
+        file_exists(__DIR__.'/vendor/php/VersionControl/Git.php')
+        ) {
+        set_include_path(__DIR__.'/vendor/php');
+    }
     require_once 'VersionControl/SVN.php';
     require_once 'VersionControl/Git.php';
-
     require_once 'Zend/Loader/Autoloader.php';
     $loader = Zend_Loader_Autoloader::getInstance();
 
