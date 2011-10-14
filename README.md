@@ -19,8 +19,8 @@ This tool aimed to support merging ZF1's commits.
 
 ## How to use ?
 please set your environment in zfmerge.ini
-- ZF1's svn local checkout.
-- ZF2's git local clone.
+ - ZF1's svn local checkout.
+ - ZF2's git local clone.
 
 sample usage:
 <code>
@@ -70,11 +70,11 @@ Some component is under re-implementing, so all issue not need to merge.
 You should need to know ZF2's developing status.
 
 ## Setup with pryus
-<code>
+<pre>
 $php pyrus.phar ./vendor set bin_dir ./vendor/bin
 $php pyrus.phar ./vendor install pear/VersionControl_SVN-alpha
 $php pyrus.phar ./vendor install pear/VersionControl_Git-alpha
 $php pyrus.phar ./vendor channel-discover pear.zfcampus.org
 $php pyrus.phar ./vendor install http://pear.zfcampus.org/get/ZF-1.11.10.tgz
-</code>
+</pre>
 
