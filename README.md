@@ -69,7 +69,7 @@ http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk
 Some component is under re-implementing, so all issue not need to merge.
 You should need to know ZF2's developing status.
 
-## Setup with pryus
+## Setup with pyrus
 <pre>
 $php pyrus.phar ./vendor set bin_dir ./vendor/bin
 $php pyrus.phar ./vendor install pear/VersionControl_SVN-alpha
