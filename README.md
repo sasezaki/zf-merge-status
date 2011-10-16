@@ -10,6 +10,13 @@ This is a Check tool for
      IS MERGED TO
     Zend Framework 2.
 
+
+similar a command such as next. and comparing.
+<code>
+$svn log -r {2010-07-05}:HEAD library | grep "ZF-"
+$git shortlog --since=2010-07-05 library | grep "ZF-"
+</code>
+
 ## Why ?
 ZF2 started developing since July 05 2010. (then ZF2 is branched from ZF1)
 
