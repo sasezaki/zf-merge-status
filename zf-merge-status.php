@@ -54,13 +54,8 @@ function check($differ, $onlynotice){
 
 function setUp($config) {
 
-    // check all requirements installed via pyrus?
-    if (file_exists(__DIR__.'/vendor/php/Zend/Version.php') &&
-        file_exists(__DIR__.'/vendor/php/VersionControl/SVN.php') &&
-        file_exists(__DIR__.'/vendor/php/VersionControl/Git.php')
-        ) {
-        set_include_path(__DIR__.'/vendor/php');
-    }
+    // all requirements can install via pyrus
+    set_include_path(__DIR__.'/vendor/php'.PATH_SEPARATOR.get_include_path());
     require_once 'VersionControl/SVN.php';
     require_once 'VersionControl/Git.php';
     require_once 'Zend/Loader/Autoloader.php';
