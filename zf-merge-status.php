@@ -313,17 +313,8 @@ class ZFMerge_Differ
         22662 => 'ZF-5413: no double parentheses | NULL -> null (using "$var === null" instaed of "is_null($var)")',
         22661 => 'ZF-5413: fixed my last commit is_null -> === null',
         22660 => 'ZF-5413: use "$var === null" instaed of "is_null($var)"',
-        23088 => 'merged https://github.com/zendframework/zf2/pull/494',
+        23088 => 'r23088 merged https://github.com/zendframework/zf2/pull/494',
     );
-
-    /**
-    public $ignore_revisions = array(
-        'Acl' => array(23480 => '****already merged***'), // <- not has issue no (@todo handle automatic these)
-        'Barcode' => array(22999 => '[GENERIC] Barcode: remove extra spaces'),
-        'InfoCard' => array(23279 => 'merged https://github.com/zendframework/zf2/pull/494'), 
-        'Service' => array(22628 => '***merged**'), // Twitter
-        'Text' => array(23856 => '[ZF-11234] Zend_Text - Missing require_once.'),
-    );*/
 
     public function __construct($component, $cache, $svn_path, $git_path)
     {
@@ -417,6 +408,7 @@ class ZFMerge_Differ
         $ignores = $this->getIgnores();
         $ignore_revs = array_flip($ignores);
         foreach ($diff as $rev => $commit) {
+            //var_dump($rev, $ignore_revs);
             if (in_array($rev, $ignore_revs)) {
                 $status = new ZFMerge_Status;
                 $status->status = ZFMerge_Status::STATUS_IGNORE;
