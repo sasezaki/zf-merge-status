@@ -13,14 +13,14 @@ $onlynotice = isset($argv[2]) ? true :false;
 if ($argv[1] == 'ALL') {
     foreach (ZFMerge_Svn::getComponents() as $component) {
         if (in_array($component, ZFMerge_Differ::getIgnoreComponents())) continue;
-        echo '+++', $component, '+++', PHP_EOL;
+        echo PHP_EOL, '##', $component, '', PHP_EOL;
         check($differ($component), $onlynotice);
     }
 } else if ($argv[1] === 'pickup') {
     foreach (ZFMerge_Svn::getComponents() as $component) {
         if (in_array($component, array('Application', 'View', 'CodeGenerator', 'Tool', 'Controller', 'Service'))) continue;
         if (in_array($component, ZFMerge_Differ::getIgnoreComponents())) continue;
-        echo '+++', $component, '+++', PHP_EOL;
+        echo '##', $component, '', PHP_EOL;
         check($differ($component), $onlynotice);
     }
 } else {
@@ -33,19 +33,29 @@ function check($differ, $onlynotice){
     foreach ($checks as $rev => $status) {
         if ($onlynotice && $status->status !== ZFMerge_Status::STATUS_NONE) continue;
 
-        echo '*revision|'. $rev .' ....... ' ;
-        echo $status->status, PHP_EOL;
-        echo ' - ' . $status->message, PHP_EOL;
+        if (!$onlynotice) {
+            echo '*revision|'. $rev .' ....... ' ;
+            echo $status->status, PHP_EOL;
+            echo ' - ' . $status->message, PHP_EOL;
+        }
 
         if ($status->status == ZFMerge_Status::STATUS_NONE) {
-            echo '[NOTICE] This commit seems to be not reflected to ZF2 yet.', PHP_EOL;
-            echo 'http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev='. $rev, PHP_EOL;
+            echo "[r$rev](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=$rev)";  
+            if ($onlynotice) {
+                echo ',';
+            } else {
+                echo PHP_EOL;
+            }
+          //  echo '[NOTICE] This commit seems to be not reflected to ZF2 yet.', PHP_EOL;
+          //  echo 'http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev='. $rev, PHP_EOL;
         }
         if ($status->status == ZFMerge_Status::STATUS_MERGED) {
             echo ' - ' . $status->commit->id, PHP_EOL;
         }
     
-        echo PHP_EOL;
+        if (!$onlynotice) {
+            echo PHP_EOL;
+        }
     }
 }
 
