@@ -4,13 +4,14 @@
 $useragent = array(
 23058, 23483,23661, 23728, 23772
 ,24283 ,23989 ,23892 ,23872 ,23772 ,23660 ,23555 ,23483 ,23466 ,23232 ,23214 ,23173 ,23172,23156 ,23130 ,23122 ,23058 
-,24532, 24540, 24538, 
+,24528, 24532, 24538, 24540, 
 );
 
 $useragent = array_combine($useragent, $useragent);
 return array(
         'Acl' => array(23480 => 'r23480 ****already merged***'), // <- not has issue no (@todo handle automatic these)
         'Barcode' => array(22999 => 'r22999 [GENERIC] Barcode: remove extra spaces'),
+        'Captcha' => array(24243 => 'ZF-10991: backport r24242 to trunk remove debugging code'),
         'InfoCard' => array(
             23279 => 'r23279 merged https://github.com/zendframework/zf2/pull/494'
         ),
@@ -23,9 +24,14 @@ return array(
 
         ),
         'Http' => $useragent 
-            + array(22537, 22576) //ignore Loader issues
-            + array(23073, 23863, 24080, 24269, 24336, 24334), //fixed
+            + array(22537 => 22537, 22576 => 22576) //ignore Loader issues
+            + array(23073 => 23073, 23863 => 23863, 24080 => 24080, 24269 => 24269, 24336 => 24336, 24334 => 24334), //fixed
         'Text' => array(23856 => 'r23856 [ZF-11234] Zend_Text - Missing require_once.'),
+        'Uri' => array(
+            23408 => 'comment typo',
+            23942 => "ZF2s will not reproduce without normalize (ZF-11060')",
+            23979 => 'ZF-11060 Backing out r23942 from Zend_Uri, not a valid fix'
+        )
     );
 
 

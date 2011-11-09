@@ -42,7 +42,7 @@ function check($differ, $onlynotice){
         if ($status->status == ZFMerge_Status::STATUS_NONE) {
             echo "[r$rev](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=$rev)";  
             if ($onlynotice) {
-                echo ',';
+                echo ',', PHP_EOL;
             } else {
                 echo PHP_EOL;
             }
