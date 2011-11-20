@@ -13,6 +13,7 @@ $onlynotice = isset($argv[2]) ? true :false;
 if ($argv[1] == 'ALL') {
     foreach (ZFMerge_Svn::getComponents() as $component) {
         if (in_array($component, ZFMerge_Differ::getIgnoreComponents())) continue;
+        if (in_array($component, array('Application'))) continue; //moved ZF1 module
         echo PHP_EOL, '##', $component, '', PHP_EOL;
         check($differ($component), $onlynotice);
     }

@@ -1,5 +1,6 @@
 <?php
 
+
 //
 $useragent = array(
 23058, 23483,23661, 23728, 23772
@@ -12,6 +13,7 @@ return array(
         'Acl' => array(23480 => 'r23480 ****already merged***'), // <- not has issue no (@todo handle automatic these)
         'Barcode' => array(22999 => 'r22999 [GENERIC] Barcode: remove extra spaces'),
         'Captcha' => array(24243 => 'ZF-10991: backport r24242 to trunk remove debugging code'),
+        'Crypt' => array(23438 => 'merged at https://github.com/zendframework/zf2/pull/531'),
         'InfoCard' => array(
             23279 => 'r23279 merged https://github.com/zendframework/zf2/pull/494'
         ),
@@ -26,6 +28,10 @@ return array(
         'Http' => $useragent 
             + array(22537 => 22537, 22576 => 22576) //ignore Loader issues
             + array(23073 => 23073, 23863 => 23863, 24080 => 24080, 24269 => 24269, 24336 => 24336, 24334 => 24334), //fixed
+        'Paginator' => array(
+            23188 => 'r23188 merged',
+            23313 => 'r23313 merged'
+        ),
         'Text' => array(23856 => 'r23856 [ZF-11234] Zend_Text - Missing require_once.'),
         'Uri' => array(
             23408 => 'comment typo',
