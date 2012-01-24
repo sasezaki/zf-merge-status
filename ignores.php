@@ -17,6 +17,9 @@ return array(
         'InfoCard' => array(
             23279 => 'r23279 merged https://github.com/zendframework/zf2/pull/494'
         ),
+        'Json' => array(
+            24251 => 'merged library -> 886ed38990 & tests: ->4e629efa'
+        ),
         'Service' => array(22628 => 'r22628 ***merged**'), // Twitter
         'Soap' => array(
             22560 => 'r22560 merged',
