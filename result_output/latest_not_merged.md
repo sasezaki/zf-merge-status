@@ -27,6 +27,7 @@
 [r23221](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23221),
 [r23746](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23746),
 [r24492](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24492),
+[r24586](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24586),
 
 ##CodeGenerator
 [r23559](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23559),
@@ -122,7 +123,6 @@
 ##InfoCard
 
 ##Json
-[r24251](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24251),
 
 ##Layout
 
@@ -131,6 +131,8 @@
 [r24349](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24349),
 [r24351](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24351),
 [r24353](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24353),
+[r24610](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24610),
+[r24612](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24612),
 
 ##Locale
 [r22712](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22712),
@@ -167,7 +169,6 @@
 [r24234](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24234),
 [r24451](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24451),
 [r24454](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24454),
-[r24458](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24458),
 [r24476](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24476),
 
 ##Oauth
@@ -270,7 +271,7 @@
 [r24556](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24556),
 
 ##Soap
-[r24581](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24581),
+[r24602](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24602),
 
 ##Tag
 
