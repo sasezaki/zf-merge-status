@@ -325,6 +325,7 @@ class ZFMerge_Differ
         22661 => 'ZF-5413: fixed my last commit is_null -> === null',
         22660 => 'ZF-5413: use "$var === null" instaed of "is_null($var)"',
         23088 => 'r23088 merged https://github.com/zendframework/zf2/pull/494',
+        24593 => 'update year 2012',
     );
 
     public function __construct($component, $cache, $svn_path, $git_path)
