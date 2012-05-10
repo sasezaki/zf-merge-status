@@ -32,16 +32,6 @@
 [r24699](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24699),
 [r24704](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24704),
 
-##CodeGenerator
-[r23559](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23559),
-[r23561](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23561),
-[r24096](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24096),
-[r24098](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24098),
-[r24389](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24389),
-[r24418](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24418),
-[r24456](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24456),
-[r24534](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24534),
-
 ##Config
 [r23103](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23103),
 [r23120](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23120),
@@ -50,6 +40,8 @@
 [r24044](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24044),
 [r24090](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24090),
 [r24554](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24554),
+[r24712](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24712),
+[r24786](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24786),
 
 ##Console
 
@@ -77,12 +69,11 @@
 [r23902](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23902),
 [r23909](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23909),
 [r24436](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24436),
+[r24710](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24710),
 
 ##File
 
 ##Filter
-[r24004](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24004),
-[r24006](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24006),
 
 ##Form
 [r22930](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22930),
@@ -96,6 +87,7 @@
 [r24370](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24370),
 [r24391](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24391),
 [r24452](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24452),
+[r24773](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24773),
 
 ##Gdata
 [r22880](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22880),
@@ -106,6 +98,8 @@
 [r24395](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24395),
 [r24583](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24583),
 [r24682](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24682),
+[r24777](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24777),
+[r24779](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24779),
 
 ##Http
 [r23230](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23230),
@@ -117,6 +111,7 @@
 [r24270](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24270),
 [r24299](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24299),
 [r24387](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24387),
+[r24783](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24783),
 
 ##InfoCard
 
@@ -135,9 +130,10 @@
 [r22808](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22808),
 [r24139](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24139),
 [r24323](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24323),
+[r24711](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24711),
+[r24766](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24766),
 
 ##Log
-[r23596](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23596),
 
 ##Mail
 [r23128](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23128),
@@ -145,6 +141,7 @@
 [r23475](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23475),
 [r24162](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24162),
 [r24326](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24326),
+[r24759](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24759),
 
 ##Markup
 [r24265](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24265),
@@ -181,6 +178,7 @@
 [r23717](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23717),
 [r23724](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23724),
 [r24572](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24572),
+[r24754](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24754),
 
 ##Pdf
 [r22797](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22797),
@@ -264,8 +262,11 @@
 [r24555](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24555),
 [r24556](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24556),
 [r24697](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24697),
+[r24745](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24745),
 
 ##Soap
+[r24718](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24718),
+[r24744](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24744),
 
 ##Tag
 
@@ -287,16 +288,8 @@
 [r23901](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23901),
 
 ##Validate
-[r22540](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22540),
 [r22659](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22659),
-[r22668](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22668),
-[r22691](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22691),
-[r22830](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22830),
-[r22832](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22832),
-[r24124](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24124),
-[r24305](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24305),
 [r24486](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24486),
-[r24631](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24631),
 [r24702](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24702),
 
 ##View
@@ -324,6 +317,9 @@
 [r24477](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24477),
 [r24488](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24488),
 [r24559](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24559),
+[r24750](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24750),
+[r24768](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24768),
+[r24776](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24776),
 
 ##Wildfire
 [r23531](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23531),
