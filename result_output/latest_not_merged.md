@@ -181,7 +181,6 @@
 [r24754](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24754),
 
 ##Pdf
-[r22797](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22797),
 [r22834](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22834),
 [r22839](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22839),
 [r22844](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22844),
@@ -214,8 +213,6 @@
 [r23394](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23394),
 [r23906](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23906),
 [r24143](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24143),
-[r24166](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24166),
-[r24169](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24169),
 
 ##Serializer
 
@@ -288,7 +285,6 @@
 [r23901](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23901),
 
 ##Validate
-[r22659](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22659),
 [r24486](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24486),
 [r24702](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24702),
 

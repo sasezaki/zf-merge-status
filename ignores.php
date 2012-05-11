@@ -45,6 +45,7 @@ return array(
             22977 => 'ZF-10472: review tests of Zend_Log',
             23575 => 'already merged - replacement of the function is_integer() alias.',
             23600 => 'r23600 already merged',
+            23596 => 'Factory is removed at zf2',
         ),
         'Service' => array(
             22628 => 'r22628 ***merged**', // Twitter
@@ -76,6 +77,13 @@ return array(
             23188 => 'r23188 merged',
             23313 => 'r23313 merged',
         ),
+        'Pdf' => array(
+            22797 => 'r22797 it seems merged',
+        ),
+        'Search' => array(
+            24166 => 'r24166 ISO8859-1 -> ISO-8859-1',
+            24169 => 'r24619 Backed out r24166; Jumped the gun :(',
+        ),
         'Text' => array(
             23856 => 'r23856 [ZF-11234] Zend_Text - Missing require_once.',
             24497 => 'r24497 is merged https://github.com/zendframework/zf2/pull/930',
@@ -85,7 +93,28 @@ return array(
             23408 => 'comment typo',
             23942 => "ZF2s will not reproduce without normalize (ZF-11060')",
             23979 => 'ZF-11060 Backing out r23942 from Zend_Uri, not a valid fix',
-        )
+        ),
+        'Validate' => array(
+            //22832 //thomas
+            //24124 is reverveted at 24305 
+            24124 => 24124,
+            24305 => 24305,
+            // 24486  should check http://framework.zend.com/issues/browse/ZF-11784            
+            24631 => 'r24631 xxx domain is already merged',
+            22540 => 'r22540', 
+            22659 => 'r22659', 
+            22668 => 'r22668',
+            22691 => 'r22691',
+            22830 => 'r22830',
+            22832 => 'r22832',
+            24124 => 'wrong 24124',
+            24305 => 'reverted 24124',
+            24631 => '24631 .xxx is merged'
+        ),
+        //View => array(
+        // 22879 => fluent interface
+        // 23058 => HttpUserAgent
+        // 23080 => Gravatar (1.11)
     );
 
 

@@ -9,26 +9,28 @@ if (!isset($argv[1])) {
     die();
 }
 $onlynotice = isset($argv[2]) ? true :false;
+$echoCommitMessage = isset($argv[3]) ? true :false;
 
 if ($argv[1] == 'ALL') {
     foreach (ZFMerge_Svn::getComponents() as $component) {
         if (in_array($component, ZFMerge_Differ::getIgnoreComponents())) continue;
         if (in_array($component, array('Application'))) continue; //moved ZF1 module
+        if (in_array($component, array('CodeGenerator'))) continue; // currently fail
         echo PHP_EOL, '##', $component, '', PHP_EOL;
-        check($differ($component), $onlynotice);
+        check($differ($component), $onlynotice, $echoCommitMessage);
     }
 } else if ($argv[1] === 'pickup') {
     foreach (ZFMerge_Svn::getComponents() as $component) {
         if (in_array($component, array('Application', 'View', 'CodeGenerator', 'Tool', 'Controller', 'Service'))) continue;
         if (in_array($component, ZFMerge_Differ::getIgnoreComponents())) continue;
         echo '##', $component, '', PHP_EOL;
-        check($differ($component), $onlynotice);
+        check($differ($component), $onlynotice, $echoCommitMessage);
     }
 } else {
-    check($differ($argv[1]), $onlynotice);
+    check($differ($argv[1]), $onlynotice, $echoCommitMessage);
 }
 
-function check($differ, $onlynotice){
+function check($differ, $onlynotice, $echoCommitMessage){
     $checks = $differ->check();
 
     foreach ($checks as $rev => $status) {
@@ -41,9 +43,14 @@ function check($differ, $onlynotice){
         }
 
         if ($status->status == ZFMerge_Status::STATUS_NONE) {
+
             echo "[r$rev](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=$rev)";  
             if ($onlynotice) {
-                echo ',', PHP_EOL;
+                if ($echoCommitMessage) {
+                    echo PHP_EOL, $status->commit["MSG"], PHP_EOL;
+                } else {
+                    echo ',', PHP_EOL;
+                }
             } else {
                 echo PHP_EOL;
             }
@@ -309,9 +316,11 @@ class ZFMerge_Differ
     protected $component; // <- should be ZF1's !!
 
     public static $ignore_components = array(
-        'Cache', 'Db', 'Loader', 'Reflection',
+        'Cache', 'Db', 'Loader', 
+        'Reflection',
         'Controller',
-        'Session' // ??? (<- Already Updated for ZF2. but, I can't judge)
+        'Session', // ??? (<- Already Updated for ZF2. but, I can't judge)
+        'Layout', 'Tool'
     );
 
     public $ignore_revisions_set = false;
