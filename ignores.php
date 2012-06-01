@@ -20,6 +20,11 @@ return array(
         'Captcha' => array(
             24243 => 'ZF-10991: backport r24242 to trunk remove debugging code'
         ),
+        'Config' => array(
+            23103 => 'r23103 [1.11] Promoted Zend_Config_Yaml/Json to trunk',
+            23120 => 'r23120 [ZF-413 & ZF-414] Zend_Config_Yaml support the multi sections.',
+
+        ),
         'Crypt' => array(
             23438 => 'merged at https://github.com/zendframework/zf2/pull/531'
         ),
@@ -40,6 +45,13 @@ return array(
         ),
         'Json' => array(
             24251 => 'merged library -> 886ed38990 & tests: ->4e629efa',
+        ),
+        'Ldap' => array(
+            22996 => '22996 https://github.com/zendframework/zf2/pull/1227', 
+            24349 => '24349 https://github.com/zendframework/zf2/pull/1227', 
+            24351 => '24351 https://github.com/zendframework/zf2/pull/1227', 
+            24353 => '24353 https://github.com/zendframework/zf2/pull/1227', 
+            24610 => '24610 https://github.com/zendframework/zf2/pull/1227',
         ),
         'Log' => array(
             22977 => 'ZF-10472: review tests of Zend_Log',
@@ -111,10 +123,32 @@ return array(
             24305 => 'reverted 24124',
             24631 => '24631 .xxx is merged'
         ),
-        //View => array(
+        'View' => array(
         // 22879 => fluent interface
-        // 23058 => HttpUserAgent
+            23058 => 'HttpUserAgent',
         // 23080 => Gravatar (1.11)
+            23387 => 'r23387 docblock, missing '*' . is merged',
+        
+            23390 => 'r23390 is no require zf2',
+            
+        //move to form view helper's
+        //23402, 24059, 24157 24477 24488 , 24750
+
+            //23463 => Helper UserAgent
+            
+      /** rdfa */      
+            23525 => 'fixed http://framework.zend.com/issues/browse/ZF2-229',
+            // 23538 => rdfa
+            // 23610 => 'ZF-9743' https://github.com/zendframework/zf2/pull/1427/files
+
+            //(23945, 23947, 24058 & is set)
+            23991 => 'r23991 View\\Abstract',
+            24559 => 'r24559 is Exception.php issue'
+        ),
+        'XmlRpc' => array(
+            24402 => 'r24402 bad fix',
+            24480 => 'r24480 fix 24402',            
+        ),
     );
 
 

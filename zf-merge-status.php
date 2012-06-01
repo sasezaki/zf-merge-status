@@ -20,8 +20,13 @@ if ($argv[1] == 'ALL') {
         check($differ($component), $onlynotice, $echoCommitMessage);
     }
 } else if ($argv[1] === 'pickup') {
+    // hotlist
     foreach (ZFMerge_Svn::getComponents() as $component) {
-        if (in_array($component, array('Application', 'View', 'CodeGenerator', 'Tool', 'Controller', 'Service'))) continue;
+        if (in_array($component, 
+                     //old - array('Application', 'View', 'CodeGenerator', 'Tool', 'Controller', 'Service'))) continue;
+                     array('Application', 'CodeGenerator', 
+                           'Amf', 'Cloud', 'Config', 'Service', 'Dojo', 'Http', 'Locale', 'Mail',
+                           'Markup', 'Translate', 'Wildfire', 'Date', 'Test', 'Currency', 'OAuth', 'OpenId'))) continue;
         if (in_array($component, ZFMerge_Differ::getIgnoreComponents())) continue;
         echo '##', $component, '', PHP_EOL;
         check($differ($component), $onlynotice, $echoCommitMessage);
@@ -45,11 +50,21 @@ function check($differ, $onlynotice, $echoCommitMessage){
         if ($status->status == ZFMerge_Status::STATUS_NONE) {
 
             echo "[r$rev](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=$rev)";  
+            echo " ", $status->commit['DATE'], " / ", $status->commit['AUTHOR'];
             if ($onlynotice) {
                 if ($echoCommitMessage) {
-                    echo PHP_EOL, $status->commit["MSG"], PHP_EOL;
+                    echo PHP_EOL, PHP_EOL;
+                    echo "<pre>".preg_replace('/^\s+/m', '', rtrim($status->commit["MSG"])), PHP_EOL, "</pre>", PHP_EOL, PHP_EOL;
+                    // http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FHeadTitle.php&rev=23387&peg=23387
+                    foreach ($status->commit['PATHS'] as $path) {
+                        $href = 'http://framework.zend.com/code/diff.php?repname=Zend+Framework&path='. 
+                            urlencode(substr($path['PATH'], 9)) . '&rev='. $rev;
+                        echo " - {".$path['ACTION']."} [", substr($path['PATH'], 16) ,"]($href)", "\n", PHP_EOL;
+                    }
+                    //echo PHP_EOL, $status->commit["MSG"], PHP_EOL;
+                    echo "********************************************", PHP_EOL, PHP_EOL;
                 } else {
-                    echo ',', PHP_EOL;
+                    echo ",", PHP_EOL;
                 }
             } else {
                 echo PHP_EOL;
