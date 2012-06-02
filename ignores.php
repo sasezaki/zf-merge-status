@@ -40,6 +40,22 @@ return array(
             //24004 ,  
             //24006,
         ),
+        'Form' => array(
+            
+                        
+            // decorators!!
+            23298 => 'r23298 decorator ViewScript',
+            23425 => 'r23425 decorator FieldSet',
+            23757 => 'r23757 decorator FormErrros',
+            23778 => 'r23778 decorator Label',
+            23852 => 'r23852 decorator FormErrro',
+            23941 => 'r23941 decorator Label',
+            24279 => 'r24279 decorator Submit',
+            24370 => 'r24370 decorator ReCaptcha',
+            24391 => 'r24391 decorator ReCaptcha ',
+            
+            24846 => 'r24846 decorator Label',
+        ),
         'InfoCard' => array(
             23279 => 'r23279 merged https://github.com/zendframework/zf2/pull/494'
         ),
@@ -58,6 +74,9 @@ return array(
             23575 => 'already merged - replacement of the function is_integer() alias.',
             23600 => 'r23600 already merged',
             23596 => 'Factory is removed at zf2',
+        ),
+        'Pdf' => array(
+            24629 => 'r24629 [ZF-11989] Added missing require_once calls to Zend_Pdf_Canvas_Abstract',
         ),
         'Service' => array(
             22628 => 'r22628 ***merged**', // Twitter
@@ -137,13 +156,15 @@ return array(
             //23463 => Helper UserAgent
             
       /** rdfa */      
-            23525 => 'fixed http://framework.zend.com/issues/browse/ZF2-229',
-            // 23538 => rdfa
+            23525 => '? fixed http://framework.zend.com/issues/browse/ZF2-229',
+            23538 => 'r23528 is rdfa issue',
             // 23610 => 'ZF-9743' https://github.com/zendframework/zf2/pull/1427/files
 
             //(23945, 23947, 24058 & is set)
             23991 => 'r23991 View\\Abstract',
-            24559 => 'r24559 is Exception.php issue'
+            24559 => 'r24559 is Exception.php issue',
+            24477 => 'r24447 ZF-11747: Zend_View_Helper_Form omits closing tag when no content is passed',
+            24488 => 'r24488 reverted r24477 from trunk; undo ZF-11747 (missed use case caused BC break)',
         ),
         'XmlRpc' => array(
             24402 => 'r24402 bad fix',
