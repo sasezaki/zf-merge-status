@@ -214,6 +214,16 @@ Fixed setCommentCount to accept zero as valid quantity of comments
 ********************************************
 
 ##File
+[r24983](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24983) 2012-06-19T19:29:32.348690Z / matthew
+
+<pre>Remove call to rewind() in constructor
+- per prolic
+</pre>
+
+ - {M} [library/Zend/File/ClassFileLocator.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FFile%2FClassFileLocator.php&rev=24983)
+
+********************************************
+
 ##Filter
 ##Form
 [r22930](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22930) 2010-09-09T18:45:18.506459Z / matthew
@@ -316,309 +326,58 @@ to a display group, it is not rendered (until it's _in_ the display group)
 
 ********************************************
 
-##Gdata
-[r22880](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22880) 2010-08-21T23:44:00.891112Z / ramon
+[r24869](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24869) 2012-06-02T02:09:54.903581Z / adamlundrigan
 
-<pre>[ZF-10242] Zend_Gdata:
-- Fixed implemented the interface Countable.
-- Correction in the tests units the count of data was wrong.
+<pre>ZF-11225: Make escaping label optional in FormErrors form decorator
 </pre>
 
- - {M} [library/Zend/Gdata/App/Feed.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FApp%2FFeed.php&rev=22880)
+ - {M} [tests/Zend/Form/Decorator/FormErrorsTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FForm%2FDecorator%2FFormErrorsTest.php&rev=24869)
 
- - {M} [tests/Zend/Gdata/Docs/DocumentListFeedTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FDocs%2FDocumentListFeedTest.php&rev=22880)
-
- - {M} [tests/Zend/Gdata/Gbase/SnippetFeedTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbase%2FSnippetFeedTest.php&rev=22880)
-
- - {M} [tests/Zend/Gdata/Spreadsheets/ListFeedTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FSpreadsheets%2FListFeedTest.php&rev=22880)
-
- - {M} [tests/Zend/Gdata/Spreadsheets/CellFeedTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FSpreadsheets%2FCellFeedTest.php&rev=22880)
-
- - {M} [tests/Zend/Gdata/App/FeedTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FApp%2FFeedTest.php&rev=22880)
-
- - {M} [tests/Zend/Gdata/Gbase/ItemFeedTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbase%2FItemFeedTest.php&rev=22880)
+ - {M} [library/Zend/Form/Decorator/FormErrors.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FForm%2FDecorator%2FFormErrors.php&rev=24869)
 
 ********************************************
 
-[r22972](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=22972) 2010-09-18T20:33:53.670319Z / ramon
+[r24873](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24873) 2012-06-02T02:54:34.366514Z / adamlundrigan
 
-<pre>[ZF-10291 & ZF-10437] Zend_Gdata
-missing load the file "Zend/Uri/Http".
+<pre>ZF-9689: Zend_Form_Decorator_ViewHelper does not forward list separator argument
 </pre>
 
- - {M} [library/Zend/Gdata/App.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FApp.php&rev=22972)
+ - {M} [tests/Zend/Form/Decorator/ViewHelperTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FForm%2FDecorator%2FViewHelperTest.php&rev=24873)
+
+ - {M} [library/Zend/Form/Decorator/ViewHelper.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FForm%2FDecorator%2FViewHelper.php&rev=24873)
 
 ********************************************
 
-[r23804](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23804) 2011-03-16T00:53:14.019789Z / tjohns
+[r24874](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24874) 2012-06-02T03:06:39.758519Z / adamlundrigan
 
-<pre>ZF-11177: Update Zend_Gdata to use HTTPS by default for all services that fully support it.
-This enables HTTPS by default for the following services:
-- Zend_Gdata_Books
-- Zend_Gdata_Calendar
-- Zend_Gdata_Docs
-- Zend_Gdata_Gbase
-- Zend_Gdata_Photos
-- Zend_Gdata_Spreadsheets
-Notably, Zend_Gdata_YouTube is omitted due to blocking issues on YouTube's end.
+<pre>ZF-8822: Fieldset decorator should strip accept-charset
 </pre>
 
- - {M} [library/Zend/Gdata/Gbase/ItemQuery.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FItemQuery.php&rev=23804)
+ - {M} [library/Zend/Form/Decorator/Fieldset.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FForm%2FDecorator%2FFieldset.php&rev=24874)
 
- - {M} [library/Zend/Gdata/Gbase/Query.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FQuery.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Docs.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FDocs.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Calendar.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FCalendar.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Gbase/SnippetQuery.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FSnippetQuery.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Spreadsheets.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FSpreadsheets.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Spreadsheets/ListQuery.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FSpreadsheets%2FListQuery.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Photos.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FPhotos.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Books.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FBooks.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Docs/Query.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FDocs%2FQuery.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Spreadsheets/DocumentQuery.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FSpreadsheets%2FDocumentQuery.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Spreadsheets/CellQuery.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FSpreadsheets%2FCellQuery.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Calendar/EventQuery.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FCalendar%2FEventQuery.php&rev=23804)
-
- - {M} [library/Zend/Gdata/Gbase.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase.php&rev=23804)
+ - {M} [tests/Zend/Form/Decorator/FieldsetTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FForm%2FDecorator%2FFieldsetTest.php&rev=24874)
 
 ********************************************
 
-[r24033](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24033) 2011-05-11T02:31:11.241862Z / adamlundrigan
+[r24961](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24961) 2012-06-15T14:15:47.824984Z / adamlundrigan
 
-<pre>ZF-11351
-Zend_Gdata
-Zend_Gdata_AuthSub should not accept vanilla Zend_Http_Client instances
+<pre>ZF-10803: Form ID overrides Fieldset ID and causes duplicate IDs
 </pre>
 
- - {M} [tests/Zend/Gdata/AuthSubTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FAuthSubTest.php&rev=24033)
+ - {M} [library/Zend/Form/Decorator/Fieldset.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FForm%2FDecorator%2FFieldset.php&rev=24961)
 
- - {M} [library/Zend/Gdata/AuthSub.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAuthSub.php&rev=24033)
+ - {M} [tests/Zend/Form/Decorator/FieldsetTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FForm%2FDecorator%2FFieldsetTest.php&rev=24961)
 
 ********************************************
 
-[r24315](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24315) 2011-07-30T09:56:03.752420Z / mikaelkael
+[r24963](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24963) 2012-06-15T14:32:23.944169Z / adamlundrigan
 
-<pre>[ZF-2146]: stop output buffering in case of exception (fix problem in complete test execution)
+<pre>ZF-12059: MultiCheckbox should not use "for" attribute on main label tag
 </pre>
 
- - {M} [library/Zend/Gdata/AuthSub.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAuthSub.php&rev=24315)
+ - {M} [tests/Zend/Form/Element/MultiCheckboxTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FForm%2FElement%2FMultiCheckboxTest.php&rev=24963)
 
-********************************************
-
-[r24395](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24395) 2011-08-21T14:23:16.389601Z / padraic
-
-<pre>Fixes ZF-11468 - usage of https schema over http which is supported by API
-</pre>
-
- - {M} [library/Zend/Gdata/Docs.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FDocs.php&rev=24395)
-
-********************************************
-
-[r24583](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24583) 2011-12-18T22:11:34.321207Z / tjohns
-
-<pre>ZF-11948: Use HTTPS for YouTube API requests
-Per a request from the YouTube API team, all client requests
-should use HTTPS by default.
-This patch implements this for Zend_Gdata_YouTube.
-Patch-by: Jeffrey Posnick <jeffy@google.com>
-Signed-off-by: Trevor Johns <trevorjohns@google.com>
-</pre>
-
- - {M} [demos/Zend/Gdata/YouTubeVideoApp/operations.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdemos%2FZend%2FGdata%2FYouTubeVideoApp%2Foperations.php&rev=24583)
-
- - {M} [tests/Zend/Gdata/YouTubeTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FYouTubeTest.php&rev=24583)
-
- - {M} [library/Zend/Gdata/YouTube.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FYouTube.php&rev=24583)
-
- - {M} [tests/Zend/Gdata/YouTubeOnlineTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FYouTubeOnlineTest.php&rev=24583)
-
- - {M} [library/Zend/Gdata/App.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FApp.php&rev=24583)
-
- - {M} [demos/Zend/Gdata/YouTubeVideoBrowser/index.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdemos%2FZend%2FGdata%2FYouTubeVideoBrowser%2Findex.php&rev=24583)
-
-********************************************
-
-[r24682](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24682) 2012-03-18T16:03:33.169694Z / danielMitD
-
-<pre>add Zend_Gdata_Analytics
-</pre>
-
- - {A} [library/Zend/Gdata/Analytics/DataFeed.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics%2FDataFeed.php&rev=24682)
-
- - {A} [library/Zend/Gdata/Analytics/Extension/Metric.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics%2FExtension%2FMetric.php&rev=24682)
-
- - {A} [library/Zend/Gdata/Analytics/DataQuery.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics%2FDataQuery.php&rev=24682)
-
- - {A} [library/Zend/Gdata/Analytics/Extension/Property.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics%2FExtension%2FProperty.php&rev=24682)
-
- - {A} [library/Zend/Gdata/Analytics.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics.php&rev=24682)
-
- - {A} [library/Zend/Gdata/Analytics/Extension/Dimension.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics%2FExtension%2FDimension.php&rev=24682)
-
- - {M} [tests/Zend/Gdata/AllTests.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FAllTests.php&rev=24682)
-
- - {A} [tests/Zend/Gdata/Analytics/_files/TestDataFeed.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FAnalytics%2F_files%2FTestDataFeed.xml&rev=24682)
-
- - {A} [documentation/manual/de/module_specs/Zend_Gdata_Analytics.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fde%2Fmodule_specs%2FZend_Gdata_Analytics.xml&rev=24682)
-
- - {M} [documentation/manual/en/manual.xml.in](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fen%2Fmanual.xml.in&rev=24682)
-
- - {A} [tests/Zend/Gdata/Analytics](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FAnalytics&rev=24682)
-
- - {A} [tests/Zend/Gdata/Analytics/_files](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FAnalytics%2F_files&rev=24682)
-
- - {A} [library/Zend/Gdata/Analytics](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics&rev=24682)
-
- - {M} [documentation/manual/de/module_specs/Zend_Gdata-Introduction.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fde%2Fmodule_specs%2FZend_Gdata-Introduction.xml&rev=24682)
-
- - {A} [library/Zend/Gdata/Analytics/AccountEntry.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics%2FAccountEntry.php&rev=24682)
-
- - {A} [tests/Zend/Gdata/Analytics/AccountFeedTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FAnalytics%2FAccountFeedTest.php&rev=24682)
-
- - {A} [documentation/manual/en/module_specs/Zend_Gdata_Analytics.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fen%2Fmodule_specs%2FZend_Gdata_Analytics.xml&rev=24682)
-
- - {A} [library/Zend/Gdata/Analytics/AccountFeed.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics%2FAccountFeed.php&rev=24682)
-
- - {A} [library/Zend/Gdata/Analytics/Extension/TableId.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics%2FExtension%2FTableId.php&rev=24682)
-
- - {A} [library/Zend/Gdata/Analytics/Extension](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics%2FExtension&rev=24682)
-
- - {M} [documentation/manual/en/module_specs/Zend_Gdata-Introduction.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fen%2Fmodule_specs%2FZend_Gdata-Introduction.xml&rev=24682)
-
- - {A} [tests/Zend/Gdata/Analytics/_files/TestAccountFeed.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FAnalytics%2F_files%2FTestAccountFeed.xml&rev=24682)
-
- - {A} [tests/Zend/Gdata/Analytics/DataFeedTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FAnalytics%2FDataFeedTest.php&rev=24682)
-
- - {A} [library/Zend/Gdata/Analytics/DataEntry.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FAnalytics%2FDataEntry.php&rev=24682)
-
-********************************************
-
-[r24777](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24777) 2012-05-08T18:50:23.695086Z / adamlundrigan
-
-<pre>ZF-12187: Disable Google Base API (Zend_Gdata_Gbase) in 1.12.x branch
-</pre>
-
- - {M} [library/Zend/Gdata/Gbase/Feed.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FFeed.php&rev=24777)
-
- - {M} [tests/Zend/Gdata/Gbase/QueryTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbase%2FQueryTest.php&rev=24777)
-
- - {M} [tests/Zend/Gdata/GbaseOnlineTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbaseOnlineTest.php&rev=24777)
-
- - {M} [library/Zend/Gdata/Gbase/Query.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FQuery.php&rev=24777)
-
- - {M} [tests/Zend/Gdata/Gbase/SnippetQueryTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbase%2FSnippetQueryTest.php&rev=24777)
-
- - {M} [library/Zend/Gdata/Gbase/SnippetQuery.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FSnippetQuery.php&rev=24777)
-
- - {M} [tests/Zend/Gdata/Gbase/_files/TestDataGbaseItemFeedSample1.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbase%2F_files%2FTestDataGbaseItemFeedSample1.xml&rev=24777)
-
- - {M} [tests/Zend/Gdata/Gbase/ItemEntryTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbase%2FItemEntryTest.php&rev=24777)
-
- - {D} [documentation/manual/en/module_specs/Zend_Gdata_Gbase.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fen%2Fmodule_specs%2FZend_Gdata_Gbase.xml&rev=24777)
-
- - {M} [tests/Zend/Gdata/Gbase/ItemFeedTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbase%2FItemFeedTest.php&rev=24777)
-
- - {M} [library/Zend/Gdata/Gbase/ItemEntry.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FItemEntry.php&rev=24777)
-
- - {M} [library/Zend/Gdata/Gbase/ItemFeed.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FItemFeed.php&rev=24777)
-
- - {M} [documentation/manual/en/module_specs/Zend_Gdata-Introduction.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fen%2Fmodule_specs%2FZend_Gdata-Introduction.xml&rev=24777)
-
- - {M} [library/Zend/Gdata/Gbase/Entry.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FEntry.php&rev=24777)
-
- - {D} [demos/Zend/Gdata/Gbase.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdemos%2FZend%2FGdata%2FGbase.php&rev=24777)
-
- - {M} [library/Zend/Gdata/Gbase/SnippetEntry.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FSnippetEntry.php&rev=24777)
-
- - {M} [tests/Zend/Gdata/Gbase/SnippetFeedTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbase%2FSnippetFeedTest.php&rev=24777)
-
- - {D} [documentation/manual/de/module_specs/Zend_Gdata_Gbase.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fde%2Fmodule_specs%2FZend_Gdata_Gbase.xml&rev=24777)
-
- - {M} [library/Zend/Gdata/Gbase/SnippetFeed.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FSnippetFeed.php&rev=24777)
-
- - {M} [tests/TestConfiguration.php.dist](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FTestConfiguration.php.dist&rev=24777)
-
- - {D} [documentation/manual/ja/module_specs/Zend_Gdata_Gbase.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fja%2Fmodule_specs%2FZend_Gdata_Gbase.xml&rev=24777)
-
- - {M} [tests/Zend/Gdata/AllTests.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FAllTests.php&rev=24777)
-
- - {M} [library/Zend/Gdata/Gbase/Extension/BaseAttribute.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FExtension%2FBaseAttribute.php&rev=24777)
-
- - {M} [documentation/manual/en/manual.xml.in](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fen%2Fmanual.xml.in&rev=24777)
-
- - {M} [tests/Zend/Gdata/Gbase/ItemQueryTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbase%2FItemQueryTest.php&rev=24777)
-
- - {M} [documentation/manual/de/module_specs/Zend_Gdata-Introduction.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fde%2Fmodule_specs%2FZend_Gdata-Introduction.xml&rev=24777)
-
- - {M} [library/Zend/Gdata/Gbase/ItemQuery.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase%2FItemQuery.php&rev=24777)
-
- - {M} [documentation/manual/ja/module_specs/Zend_Gdata-Introduction.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fja%2Fmodule_specs%2FZend_Gdata-Introduction.xml&rev=24777)
-
- - {M} [documentation/manual/en/manual-print1.xml.in](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fen%2Fmanual-print1.xml.in&rev=24777)
-
- - {M} [tests/Zend/Gdata/Gbase/BaseAttributeTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbase%2FBaseAttributeTest.php&rev=24777)
-
- - {M} [tests/Zend/Gdata/Gbase/_files/TestDataGbaseSnippetFeedSample1.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FGbase%2F_files%2FTestDataGbaseSnippetFeedSample1.xml&rev=24777)
-
- - {M} [library/Zend/Gdata/Gbase.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FGbase.php&rev=24777)
-
-********************************************
-
-[r24779](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24779) 2012-05-08T19:13:59.379761Z / adamlundrigan
-
-<pre>ZF-12188: Disabled Google Health API (Zend_Gdata_Health) in 1.12.x branch
-</pre>
-
- - {M} [library/Zend/Gdata/Health/ProfileListEntry.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FHealth%2FProfileListEntry.php&rev=24779)
-
- - {D} [documentation/manual/en/module_specs/Zend_Gdata_Health.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fen%2Fmodule_specs%2FZend_Gdata_Health.xml&rev=24779)
-
- - {M} [library/Zend/Gdata/Health/ProfileListFeed.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FHealth%2FProfileListFeed.php&rev=24779)
-
- - {M} [library/Zend/Gdata/Health.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FHealth.php&rev=24779)
-
- - {M} [library/Zend/Gdata/Health/ProfileEntry.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FHealth%2FProfileEntry.php&rev=24779)
-
- - {M} [tests/TestConfiguration.php.dist](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FTestConfiguration.php.dist&rev=24779)
-
- - {D} [demos/Zend/Gdata/Health.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdemos%2FZend%2FGdata%2FHealth.php&rev=24779)
-
- - {D} [tests/Zend/Gdata/HealthOnlineTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FHealthOnlineTest.php&rev=24779)
-
- - {M} [library/Zend/Gdata/Health/Extension/Ccr.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FHealth%2FExtension%2FCcr.php&rev=24779)
-
- - {M} [library/Zend/Gdata/Health/ProfileFeed.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FHealth%2FProfileFeed.php&rev=24779)
-
- - {M} [tests/Zend/Gdata/AllTests.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FAllTests.php&rev=24779)
-
- - {D} [documentation/manual/de/module_specs/Zend_Gdata_Health.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fde%2Fmodule_specs%2FZend_Gdata_Health.xml&rev=24779)
-
- - {M} [library/Zend/Gdata/Health/Query.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FHealth%2FQuery.php&rev=24779)
-
- - {D} [tests/Zend/Gdata/Health](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FHealth&rev=24779)
-
- - {M} [documentation/manual/en/manual.xml.in](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fen%2Fmanual.xml.in&rev=24779)
-
-********************************************
-
-[r24796](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24796) 2012-05-12T03:34:26.827153Z / adamlundrigan
-
-<pre>ZF-9479: Update Zend_Gdata_YouTube to work with v2.0 API
-</pre>
-
- - {M} [library/Zend/Gdata/YouTube.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FGdata%2FYouTube.php&rev=24796)
-
- - {M} [tests/Zend/Gdata/YouTubeOnlineTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FGdata%2FYouTubeOnlineTest.php&rev=24796)
+ - {M} [library/Zend/Form/Element/MultiCheckbox.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FForm%2FElement%2FMultiCheckbox.php&rev=24963)
 
 ********************************************
 
@@ -643,7 +402,6 @@ Signed-off-by: Trevor Johns <trevorjohns@google.com>
 
 ##Ldap
 ##Log
-##Measure
 ##Memory
 ##Mime
 ##Navigation
@@ -763,6 +521,52 @@ Do not assume front controller has a request
  - {M} [tests/Zend/Navigation/Page/MvcTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FNavigation%2FPage%2FMvcTest.php&rev=24857)
 
  - {M} [library/Zend/Navigation/Page/Mvc.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FNavigation%2FPage%2FMvc.php&rev=24857)
+
+********************************************
+
+[r24867](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24867) 2012-06-02T01:32:50.381150Z / adamlundrigan
+
+<pre>ZF-10727: Add additional methods to Zend_Navigation_Page_Mvc for manipulating parameters
+</pre>
+
+ - {M} [tests/Zend/Navigation/Page/MvcTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FNavigation%2FPage%2FMvcTest.php&rev=24867)
+
+ - {M} [library/Zend/Navigation/Page/Mvc.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FNavigation%2FPage%2FMvc.php&rev=24867)
+
+********************************************
+
+[r24879](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24879) 2012-06-06T13:09:21.203091Z / adamlundrigan
+
+<pre>ZF-11876: Add custom page property rendering to navigation menu view helper
+Committed on behalf of Frank Brückner
+</pre>
+
+ - {M} [tests/Zend/Navigation/PageTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FNavigation%2FPageTest.php&rev=24879)
+
+ - {M} [tests/Zend/View/Helper/Navigation/MenuTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2FMenuTest.php&rev=24879)
+
+ - {M} [library/Zend/Navigation/Page.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FNavigation%2FPage.php&rev=24879)
+
+ - {M} [library/Zend/View/Helper/Navigation/HelperAbstract.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FNavigation%2FHelperAbstract.php&rev=24879)
+
+ - {M} [library/Zend/View/Helper/Navigation/Menu.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FNavigation%2FMenu.php&rev=24879)
+
+ - {M} [tests/Zend/View/Helper/Navigation/BreadcrumbsTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2FBreadcrumbsTest.php&rev=24879)
+
+ - {A} [tests/Zend/View/Helper/Navigation/_files/expected/menu/customhtmlattribs.html](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2F_files%2Fexpected%2Fmenu%2Fcustomhtmlattribs.html&rev=24879)
+
+********************************************
+
+[r24964](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24964) 2012-06-15T14:37:43.242782Z / adamlundrigan
+
+<pre>ZF-7794: Navigation with scheme classification
+</pre>
+
+ - {A} [tests/Zend/Navigation/_files/My/SchemeHelper.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FNavigation%2F_files%2FMy%2FSchemeHelper.php&rev=24964)
+
+ - {M} [tests/Zend/Navigation/Page/MvcTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FNavigation%2FPage%2FMvcTest.php&rev=24964)
+
+ - {M} [library/Zend/Navigation/Page/Mvc.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FNavigation%2FPage%2FMvc.php&rev=24964)
 
 ********************************************
 
@@ -1259,16 +1063,20 @@ Typo in exception message in Zend_Search_Lucene_Document_Html
 
 ********************************************
 
-##Serializer
-[r24815](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24815) 2012-05-24T08:50:24.532610Z / mabe
+[r24862](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24862) 2012-06-02T00:04:53.991003Z / adamlundrigan
 
-<pre>ZF-12231: fixed use of undefined variable $bin
+<pre>ZF-12067: Fix Zend_Search_Lucene_MultiSearcher class name
 </pre>
 
- - {M} [library/Zend/Serializer/Adapter/PythonPickle.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FSerializer%2FAdapter%2FPythonPickle.php&rev=24815)
+ - {A} [library/Zend/Search/Lucene/Interface/MultiSearcher.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FSearch%2FLucene%2FInterface%2FMultiSearcher.php&rev=24862)
+
+ - {M} [library/Zend/Search/Lucene/MultiSearcher.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FSearch%2FLucene%2FMultiSearcher.php&rev=24862)
+
+ - {A} [library/Zend/Search/Lucene/Interface](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FSearch%2FLucene%2FInterface&rev=24862)
 
 ********************************************
 
+##Serializer
 ##Server
 [r23182](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23182) 2010-10-20T18:10:41.214469Z / ralph
 
@@ -1420,6 +1228,28 @@ Updated Zend_Uri_Http to accept IPv6 URIs as per RFC 2732
 
 ********************************************
 
+[r24956](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24956) 2012-06-13T21:27:19.557193Z / rob
+
+<pre>Fix ZF-12057: Add Zend_Validate_Ldap_Dn
+</pre>
+
+ - {A} [library/Zend/Validate/Ldap](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FValidate%2FLdap&rev=24956)
+
+ - {A} [library/Zend/Validate/Ldap/Dn.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FValidate%2FLdap%2FDn.php&rev=24956)
+
+********************************************
+
+[r24959](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24959) 2012-06-15T13:51:04.088453Z / adamlundrigan
+
+<pre>ZF-12128: File Upload validator should display file name instead of field name in error message
+</pre>
+
+ - {M} [tests/Zend/Validate/File/UploadTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FValidate%2FFile%2FUploadTest.php&rev=24959)
+
+ - {M} [library/Zend/Validate/File/Upload.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FValidate%2FFile%2FUpload.php&rev=24959)
+
+********************************************
+
 ##View
 [r23080](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23080) 2010-10-11T17:38:21.032014Z / matthew
 
@@ -1448,15 +1278,6 @@ Updated Zend_Uri_Http to accept IPv6 URIs as per RFC 2732
  - {M} [tests/Zend/View/Helper/FormSubmitTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FFormSubmitTest.php&rev=23402)
 
  - {M} [library/Zend/View/Helper/FormSubmit.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FFormSubmit.php&rev=23402)
-
-********************************************
-
-[r23463](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23463) 2010-12-01T13:44:23.536568Z / ramon
-
-<pre>[ZF-10759] Zend_View_Helper_UserAgent apply patch "denniswinter".
-</pre>
-
- - {M} [library/Zend/View/Helper/UserAgent.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FUserAgent.php&rev=23463)
 
 ********************************************
 
@@ -1635,6 +1456,108 @@ Zend_View_Helper_FormRadio generates improper id attributes for certain values
  - {M} [tests/Zend/View/Helper/FormRadioTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FFormRadioTest.php&rev=24840)
 
  - {M} [library/Zend/View/Helper/FormRadio.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FFormRadio.php&rev=24840)
+
+********************************************
+
+[r24858](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24858) 2012-06-01T01:24:17.340020Z / adamlundrigan
+
+<pre>ZF-11643: Add support for sizes attribute in Zend_View_Helper_HeadLink
+</pre>
+
+ - {M} [tests/Zend/View/Helper/HeadLinkTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FHeadLinkTest.php&rev=24858)
+
+ - {M} [library/Zend/View/Helper/HeadLink.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FHeadLink.php&rev=24858)
+
+********************************************
+
+[r24865](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24865) 2012-06-02T01:02:32.019218Z / adamlundrigan
+
+<pre>ZF-11620: FormRadio view helper ignores doctype when selecting default list separator
+</pre>
+
+ - {M} [tests/Zend/View/Helper/FormRadioTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FFormRadioTest.php&rev=24865)
+
+ - {M} [library/Zend/View/Helper/FormRadio.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FFormRadio.php&rev=24865)
+
+********************************************
+
+[r24878](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24878) 2012-06-04T14:41:19.082584Z / adamlundrigan
+
+<pre>ZF-12048: Fixed inconsistent behavior of HeadScript view helper setFile method
+</pre>
+
+ - {M} [tests/Zend/View/Helper/HeadScriptTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FHeadScriptTest.php&rev=24878)
+
+ - {M} [library/Zend/View/Helper/HeadScript.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FHeadScript.php&rev=24878)
+
+********************************************
+
+[r24879](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24879) 2012-06-06T13:09:21.203091Z / adamlundrigan
+
+<pre>ZF-11876: Add custom page property rendering to navigation menu view helper
+Committed on behalf of Frank Brückner
+</pre>
+
+ - {M} [tests/Zend/Navigation/PageTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FNavigation%2FPageTest.php&rev=24879)
+
+ - {M} [tests/Zend/View/Helper/Navigation/MenuTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2FMenuTest.php&rev=24879)
+
+ - {M} [library/Zend/Navigation/Page.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FNavigation%2FPage.php&rev=24879)
+
+ - {M} [library/Zend/View/Helper/Navigation/HelperAbstract.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FNavigation%2FHelperAbstract.php&rev=24879)
+
+ - {M} [library/Zend/View/Helper/Navigation/Menu.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FNavigation%2FMenu.php&rev=24879)
+
+ - {M} [tests/Zend/View/Helper/Navigation/BreadcrumbsTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2FBreadcrumbsTest.php&rev=24879)
+
+ - {A} [tests/Zend/View/Helper/Navigation/_files/expected/menu/customhtmlattribs.html](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2F_files%2Fexpected%2Fmenu%2Fcustomhtmlattribs.html&rev=24879)
+
+********************************************
+
+[r24960](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24960) 2012-06-15T14:09:34.284643Z / adamlundrigan
+
+<pre>ZF-12287: HeadScript breaks text/x-jquery-tmpl by surrounding script with comments (Backport ZF2-349)
+</pre>
+
+ - {M} [documentation/manual/en/module_specs/Zend_View-Helpers-HeadScript.xml](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Fdocumentation%2Fmanual%2Fen%2Fmodule_specs%2FZend_View-Helpers-HeadScript.xml&rev=24960)
+
+ - {M} [tests/Zend/View/Helper/HeadScriptTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FHeadScriptTest.php&rev=24960)
+
+ - {M} [library/Zend/View/Helper/HeadScript.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FHeadScript.php&rev=24960)
+
+********************************************
+
+[r24962](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24962) 2012-06-15T14:28:42.131055Z / adamlundrigan
+
+<pre>ZF-7272: Allow adding an id attribute to ul elements when using Navigation menu view helper
+</pre>
+
+ - {A} [tests/Zend/View/Helper/Navigation/_files/expected/menu/normalize-id-prefix-without-content.html](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2F_files%2Fexpected%2Fmenu%2Fnormalize-id-prefix-without-content.html&rev=24962)
+
+ - {M} [tests/Zend/View/Helper/Navigation/MenuTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2FMenuTest.php&rev=24962)
+
+ - {M} [library/Zend/View/Helper/Navigation/HelperAbstract.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FNavigation%2FHelperAbstract.php&rev=24962)
+
+ - {M} [library/Zend/View/Helper/Navigation/Menu.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FNavigation%2FMenu.php&rev=24962)
+
+ - {A} [tests/Zend/View/Helper/Navigation/_files/expected/menu/normalize-id-prefix-with-content.html](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2F_files%2Fexpected%2Fmenu%2Fnormalize-id-prefix-with-content.html&rev=24962)
+
+ - {A} [tests/Zend/View/Helper/Navigation/_files/expected/menu/normalize-id-prefix-with-null.html](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2F_files%2Fexpected%2Fmenu%2Fnormalize-id-prefix-with-null.html&rev=24962)
+
+********************************************
+
+[r24986](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24986) 2012-06-19T20:27:15.593556Z / rob
+
+<pre>Fix ZF-10458. Patch by Frank Brückner.
+</pre>
+
+ - {A} [tests/Zend/View/Helper/Navigation/_files/helpers](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2F_files%2Fhelpers&rev=24986)
+
+ - {M} [tests/Zend/View/Helper/Navigation/NavigationTest.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2FNavigationTest.php&rev=24986)
+
+ - {M} [library/Zend/View/Helper/Navigation.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Flibrary%2FZend%2FView%2FHelper%2FNavigation.php&rev=24986)
+
+ - {A} [tests/Zend/View/Helper/Navigation/_files/helpers/Menu.php](http://framework.zend.com/code/diff.php?repname=Zend+Framework&path=%2Ftrunk%2Ftests%2FZend%2FView%2FHelper%2FNavigation%2F_files%2Fhelpers%2FMenu.php&rev=24986)
 
 ********************************************
 
