@@ -66,7 +66,6 @@
 [r23077](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23077) 2010-10-10T23:06:49.491992Z / padraic,
 [r23090](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23090) 2010-10-12T17:28:16.110912Z / padraic,
 [r23902](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23902) 2011-04-30T06:37:26.231910Z / adamlundrigan,
-[r23909](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23909) 2011-04-30T18:27:35.999622Z / adamlundrigan,
 [r24436](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24436) 2011-09-03T19:27:21.747396Z / ramon,
 
 ##File
