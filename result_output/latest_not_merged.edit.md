@@ -15,7 +15,6 @@
 
 ##Auth
 [r23693](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=23693) 2011-02-13T13:51:43.297695Z / sgehrig,
-[r24184](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24184) 2011-07-05T13:08:19.459709Z / adamlundrigan,
 
 ##Barcode
 
