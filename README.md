@@ -1,3 +1,8 @@
+OUT OF DATE
+===========
+This tools is out of date for zf-checking usage.
+
+
 Zend Framework Merge Status Check Tool
 ======================================
 by sasezaki
