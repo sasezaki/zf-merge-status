@@ -280,7 +280,6 @@
 
 ##Validate
 [r24486](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24486) 2011-09-30T19:33:53.065465Z / hobodave,
-[r24702](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24702) 2012-03-28T20:08:40.102530Z / rob,
 [r24807](http://framework.zend.com/code/revision.php?repname=Zend+Framework&path=%2Ftrunk&rev=24807) 2012-05-15T12:10:42.144694Z / adamlundrigan,
 
 ##View
